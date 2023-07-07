@@ -1,0 +1,113 @@
+/*Layout*/
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+}
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+nav{
+    grid-area: nav;
+    background: #01579b;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+    background-color: #e1e2e1;
+    color: black;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #002f6c;
+}
+
+.card{
+    box-shadow: 1px 1px 5px 1px #e1e2e1;
+}
+
+@media screen and (min-width: 576px){
+    body{
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas: 
+        "nav nav"
+        "aside main"
+        "footer footer";
+    }
+}
+
+@media screen and (min-width: 992px){
+    body{
+        grid-template-columns: 15% 85%;
+        grid-template-areas: 
+        "nav aside"
+        "nav main"
+        "footer main";
+    }
+}
+
+/*Componentes*/
+
+nav ul{
+    list-style-type: none;
+}
+
+.card button{
+    background: #01579b;
+}
+
+.autos{
+    overflow-y: scroll;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/*Medias*/
+
+@media screen and (min-width: 576px){
+  .autos{
+    height: 70vh;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .autos{
+      height: 75vh;
+      grid-template-columns: repeat(4, 1fr);
+      }
+  }
+
+  nav ul li{
+    margin-top: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
